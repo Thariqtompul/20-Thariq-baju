@@ -1,152 +1,192 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
+  <v-app>
+    <v-app-bar
+      app
+      color="purple"
+      dark
+    >
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
+        <div>
+        <v-col>
+        <h1 v-resize-text class="font-weight-bold black--text text--darken-2">
+          Project
         </h1>
+        </v-col>
+      </div>
+      
+      <v-spacer></v-spacer>
+      
+      <v-row
+        align="center"
+        justify="center"
+      >
+        <v-tabs
+    fixed-tabs
+    background-color="white"
+    dark
+  >
+    <v-tab class="ml-1 black--text">
+      List
+    </v-tab>
+    <v-tab class="ml-1 black--text">
+     search
+    </v-tab>
+    <v-tab class="ml-1 black--text">
+      cart
+    </v-tab>
+  </v-tabs>
+        </v-row>
+      
+    <v-spacer></v-spacer>
+        
+        <v-hover
+        open-delay="200"
+      >
+        <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+      depressed
+      color="black"
+    >
+      LOGIN/REGISTER
+    </v-btn>
+    </v-hover>
+    </v-app-bar>
+    
 
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
-      </v-col>
+    <v-main>
 
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+        <span>
+        <v-col>
+        <h1 v-resize-text class="display-1 font-weight-bold mb-3 text-center">
+          STOCK KOSONG
+          <br />
+          MOHON MAAF!
+        </h1>
+        </v-col>
+        <v-col>
+        <h1 v-resize-text class="display-1 font-weight-regular mb-3 pl-2 text-center">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam.
+        </h1>
+        </v-col>
+          </span>
+
+      
+<div class="text-center">
+        <v-btn
+      class="ma-2"
+      outlined
+      rounded
+      color="black"
+    >
+      LOGIN
+    </v-btn>
+
+        <body-2 class="font-weight-regular ml-2 mr-2 text-center">
+          ATAU
+        </body-2>
+
+
+<v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+      depressed
+      rounded
+      color="green"
+    >
+      REGISTER
+    </v-btn>
+    </div>
+
+        <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+          
+
+        <v-col>
+        <h1 class="display-1 font-weight-bold mb-3 pl-10 text-left">
+        SIMPLE
+          <br />
+        </h1>
+        </v-col>
+        <v-col>
+        <h1 class="display-1 font-weight-regular mb-3 pl-10 text-left">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam.
+        </h1>
+        </v-col>
+
+      <br />
+      <br />
+
+        <v-col>
+        <h1 class="display-1 font-weight-bold mb-3 pr-10 text-right"
+        style="margin-right=100">
+        CEPAT
+        </h1>
+        </v-col>
+
+        <v-col>
+        <h1 class="display-1 font-weight-regular mb-3 pr-10 text-right">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam.
+        </h1>
+        </v-col>
+        
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <v-col>
+        <h1 class="display-1 font-weight-bold mb-3 pl-10 text-center">
+        About Us
+          <br />
+        </h1>
+        </v-col>
+        <v-col>
+        <h1 class=" font-weight-regular mb-3 text-center">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam.
+        </h1>
+        </v-col>
+
+        
+    </v-main>
+  
+  <v-footer
+color="grey"
+    padless
+  >
+    <v-row
+      justify="center"
+      no-gutters
+    >
       <v-col
-        class="mb-5"
+        class="light-2 py-4 text-center white--text"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
+        {{ new Date().getFullYear() }} — <strong>Muhammad Inwan At Thariq TI</strong>
       </v-col>
     </v-row>
-  </v-container>
+</v-footer>
+</v-app>
 </template>
-
-<script>
-  export default {
-    name: 'HelloWorld',
-
-    data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
-        },
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-        },
-      ],
-    }),
-  }
-</script>
 
